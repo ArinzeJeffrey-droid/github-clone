@@ -143,7 +143,6 @@ form.onsubmit = (e) => {
 
 
     }).catch(err => {
-        console.log("EROR", err)
         /** Render fallback UI on ERROR */
         errorComponent.style.display = "flex"
         form.style.display = "none"
