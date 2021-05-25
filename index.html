@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/windows/32/000000/github.png">
+    <title>Your Repositories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Form component starts -->
+    <div class="init-page" id="form-container">
+        <!-- lazy load UI starts -->
+        <div class="loader-container" id="loader">
+            <div class="lds-facebook"><div></div><div></div><div></div></div>
+        </div>
+        <!-- lazy load UI ends -->
+
+        <!-- Error fallback UI starts -->
+        <div class="error-container" id="error-container">
+            <h1>Something went wrong.</h1>
+            <button class="submit-btn" id="try-again-btn">Try again</button>
+        </div>
+        <!-- Error fallback UI ends -->
+
+        <form class="form-wrap" id="submit-form">
+            <h1>Enter Github Username</h1>
+            <div class="init-page-form">
+                <input required type="text" class="auth" id="username">
+                <button class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Form component ends -->
+    <div class="git-container" id="git">
+        <!-- Navbar starts -->
+        <nav class="navbar">
+            <div class="navbar-item-left">
+                <a href="#" class="github-icon" id="git-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <form action="" class="search">
+                    <div class="search-inner">
+                        <input type="text" placeholder="Search or jump to...">
+                        <button></button>
+                    </div>
+                </form>
+                <ul class="navlinks">
+                    <li><a href="#">Pull Requests</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="navbar-item-right">
+                <div class="right-inner">
+                    <span class="fa-stack bell" data-count="28">
+                        <i class="far fa-bell fa-stack-1x bell-icon"></i>
+                    </span>
+                    <div class="plus-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="avatar-sm-container">
+                        <div class="avatar-sm">
+                            <img class="img_url" loading="lazy" alt="">
+                        </div>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar ends -->
+        <!-- mobile navbar  starts-->
+        <nav class="mobile-nav">
+            <i class="fas fa-bars bars" id="bars"></i>
+            <i class="fab fa-github git"></i>
+            <span class="fa-stack bell" data-count="28">
+                <i class="far fa-bell fa-stack-1x bell-icon"></i>
+            </span>
+        </nav>
+        <div class="mobile-nav-submenu" id="submenu">
+            <form action="" class="mobile-search">
+                <input type="text" placeholder="Search...">
+                <button></button>
+            </form>
+            <div class="submenu-item">
+                <p>Dashboard</p>
+            </div>
+            <div class="submenu-item">
+                <p>Pull requests</p>
+            </div>
+            <div class="submenu-item">
+                <p>Issues</p>
+            </div>
+            <div class="submenu-item">
+                <p>Marketplace</p>
+            </div>
+            <div class="submenu-item">
+                <p>Explore</p>
+            </div>
+            <div class="submenu-item">
+                <p>Codespaces</p>
+            </div>
+            <div class="submenu-item">
+                <p>Sponsors</p>
+            </div>
+            <div class="submenu-item">
+                <p>Settings</p>
+            </div>
+            <div class="submenu-item">
+                <p>Username</p>
+            </div>
+            <div class="submenu-item">
+                <p><i class="fas fa-sign-out-alt"></i> Sign out</p>
+            </div>
+        </div>
+        <!-- mobile navbar ends -->
+
+        <!-- page content start -->
+        <div class="page-wrapper">
+            <div class="tab-container">
+                <div class="space-fill"></div>
+                <div class="tab-inner">
+                    <a href="#" class="tab-links"><i class="fas pr fa-book-open"></i> Overview</a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-book"></i> Repositories <span class="badge repo-count"></span></a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-poll"></i> Projects</a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-cube"></i> Packages</a>
+                </div>
+            </div>
+            <!-- mobile view starts -->
+            <div class="profile-content-mobile">
+                <div class="profile-avatar-mobile">
+                    <div class="avatar-img-container">
+                        <img class="img_url" loading="lazy" alt="">
+                    </div>
+                    <div class="user-info">
+                        <h2 class="github_name">Arinze Jeffrey</h2>
+                        <p class="nickname">ArinzeJeffrey-droid</p>
+                    </div>
+                </div>
+                <div class="emoji-sm">
+                    <div class="emoji-sm-inner">
+                        <i class="far fa-grin-beam"></i>
+                        <p>Focusing</p>
+                    </div>
+                </div>
+                <div class="user-desc">
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores hic vel voluptas enim doloremque cum ratione, distinctio beatae amet ad!</p>
+                </div>
+                <div class="repo-links-sm">
+                    <a href="#" class="tab-links"><i class="fas pr fa-book-open"></i> Overview</a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-book"></i> Repositories <span class="badge repo-count"></span></a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-poll"></i> Projects</a>
+                    <a href="#" class="tab-links"><i class="fas pr fa-cube"></i> Packages</a>
+                </div>
+            </div>
+            <!-- mobile view ends -->
+            <div class="main-content">
+                <div class="profile-container">
+                    <div class="profile-avatar">
+                        <img class="img_url" loading="lazy" alt="">
+                        <div class="emoji"><i class="far fa-grin-beam"></i></div>
+                    </div>
+                    <div class="profile-names">
+                        <span class="p-name github_name">Arinze Jeffrey</span>
+                        <span class="username nickname">ArinzeJeffrey-droid</span>
+                        <p class="desc bio">frontend developer and user interface designer</p>
+                    </div>
+                </div>
+                <div class="repo-container">
+                    <div class="repo-inner">
+                        <input type="text" placeholder="Find a repository..." class="search-repo">
+                        <div class="stats">
+                            <p><span class="count" id="result-count"></span> results for <b>public</b> repositories</p>
+                        </div>
+                        <div class="repo-card-container" id="repo-card-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page content ends -->
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
